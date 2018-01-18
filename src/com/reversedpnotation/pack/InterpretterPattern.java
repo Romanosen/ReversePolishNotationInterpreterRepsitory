@@ -21,7 +21,7 @@ public class InterpretterPattern {
                 stack.push(i);
             }
         }
-        System.out.println("Result: " + (IExpression)stack.pop().interpret());
+        System.out.println("Result: " + stack.pop().interpret());
     }
 
     public static boolean isOperator(String s) {
