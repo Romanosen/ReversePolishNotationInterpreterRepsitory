@@ -4,6 +4,9 @@ import java.util.Stack;
 
 public class InterpretterPattern {
     public static void main(String args[]) {
+        Operation operation=Operation.PLUS;
+        char plus= operation.asChar();
+
         String tokenString = "4 3 2 - 1 + *";
         Stack<IExpression> stack = new Stack();
 
