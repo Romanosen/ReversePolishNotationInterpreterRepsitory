@@ -1,4 +1,6 @@
-package com.reversedpnotation.pack;
+package org.romanosen.interpretpack;
+
+import org.romanosen.interpretpack.IExpression;
 
 public class DivisionExpression implements IExpression {
     IExpression leftExpression;
@@ -9,10 +11,13 @@ public class DivisionExpression implements IExpression {
         this.leftExpression = leftExpression;
         this.rightExpresion = rightExpresion;
     }
+    public DivisionExpression() {
+
+    }
 
     @Override
-    public int interpret() {
+    public String interpret() {
 
-        return leftExpression.interpret() / rightExpresion.interpret();
+        return new String(leftExpression.interpret() + rightExpresion.interpret()+"/");
     }
 }
